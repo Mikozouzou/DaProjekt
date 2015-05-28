@@ -23,7 +23,7 @@ public class Saut : MonoBehaviour {
         HORIZONTAL = Input.GetAxis("Horizontal");
 
         myRigidbody.AddForce(3 * Physics.gravity);
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(1))
         {
             myRigidbody.velocity = new Vector3(0, force, 0);
         }
