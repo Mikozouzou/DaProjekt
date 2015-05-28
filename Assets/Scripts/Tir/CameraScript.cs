@@ -6,7 +6,7 @@ public class CameraScript : MonoBehaviour {
     Camera camera;
 
     Ray ray; 
-    RaycastHit hit;
+    public RaycastHit hit;
 
     void Start()
     {
