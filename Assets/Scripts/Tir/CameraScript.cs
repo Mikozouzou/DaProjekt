@@ -16,20 +16,11 @@ public class CameraScript : MonoBehaviour {
 
     void Update()
     {
-        ray = camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        ray = camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); //Origine du ray : 0,0 = coin inférieur gauche de la caméra ; 1,1 = coin supérieur droit ; 0.5, 0.5 = centre de la caméra
 
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 10000;
-        Debug.DrawRay(transform.position, forward, Color.red);
+        Vector3 forward = transform.TransformDirection(Vector3.forward) * 10000; //Valeur du rayon qui sera affiché dans le Debug.
+        Debug.DrawRay(transform.position, forward, Color.red); //Affichage du rayon, qui correspond au ray.
 
-        
-        if (Physics.Raycast(ray, out hit))
-        {
-            print("I'm looking at " + hit.transform.name);
-        }
-        else
-        {
-            print("I'm looking at nothing!");
-        }
             
     }
 }
