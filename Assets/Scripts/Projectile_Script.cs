@@ -22,4 +22,12 @@ public class Projectile_Script : MonoBehaviour {
     {
         myRigidbody.AddForce(canonPosition.forward * speed);
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject != null)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
