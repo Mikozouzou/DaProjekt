@@ -7,6 +7,8 @@ public class Tir : MonoBehaviour {
     CameraScript myCameraScript;
     float distance;
 
+
+
 	// Use this for initialization
 	void Start ()
     {
@@ -16,15 +18,12 @@ public class Tir : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-
+        //Debug.Log(myCameraScript.hit.point);
         distance = Vector3.Distance(transform.position, myCameraScript.hit.point); //Calcule la distance entre l'arme et le point de contact du ray de la caméra.
-
+        Debug.Log(distance);
         if (distance >= 5) //Si la distance est supérieure à 5
         {
             transform.LookAt(myCameraScript.hit.point); //Alors l'arme regarde le point d'impact.
-        }
-        
-
-        
+        }     
 	}
 }

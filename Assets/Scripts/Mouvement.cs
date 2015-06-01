@@ -19,6 +19,7 @@ public class Mouvement : MonoBehaviour {
         if (Input.GetMouseButton(0))
         {
             chooseDeplacement = !chooseDeplacement;
+            Debug.Log(chooseDeplacement);
         }
 
         if(chooseDeplacement)
